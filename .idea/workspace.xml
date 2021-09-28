@@ -6,22 +6,20 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="450c3fb0-c2cc-4673-8993-39c081dae2dd" name="Default Changelist" comment="">
-      <changelist_data name="Changjiang Hu" email="68014731+riverhu233@users.noreply.github.com" />
-      <change afterPath="$PROJECT_DIR$/sort/README.md" afterDir="false" />
+    <list default="true" id="450c3fb0-c2cc-4673-8993-39c081dae2dd" name="Default Changelist" comment="add Sort chapter">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sort/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/sort/swapSort.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +27,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Changjiang Hu &lt;68014731+riverhu233@users.noreply.github.com&gt;" />
+      </list>
+    </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="ProjectId" id="1yiVkHun0YaHf4kY5fLhfQ5h1aC" />
   <component name="ProjectViewState">
@@ -51,6 +61,21 @@
       <option name="presentableId" value="Default" />
       <updated>1632734536827</updated>
     </task>
+    <task id="LOCAL-00001" summary="add Sort">
+      <created>1632803890455</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1632803890455</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add Sort chapter">
+      <created>1632804038978</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1632804038978</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -58,16 +83,42 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="add Sort" />
+    <MESSAGE value="add Sort chapter" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Sort chapter" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2119" y="221" key="RollbackChangesDialog" timestamp="1632804241324">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2119" y="221" key="RollbackChangesDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1632804241324" />
+    <state x="1918" y="253" key="Vcs.Push.Dialog.v2" timestamp="1632807175812">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1632807175812" />
+    <state x="2119" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1632804659522">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2119" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1632804659522" />
     <state x="1989" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1632802663579">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
