@@ -16,8 +16,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="450c3fb0-c2cc-4673-8993-39c081dae2dd" name="Default Changelist" comment="update swapSort.md for BubbleSort and QuickSort">
-      <change beforePath="$PROJECT_DIR$/sort/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/sort/README.md" afterDir="false" />
+    <list default="true" id="450c3fb0-c2cc-4673-8993-39c081dae2dd" name="Default Changelist" comment="update swapSort.md">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632810228648</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update swapSort.md">
+      <created>1632810334738</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1632810334738</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,30 +119,32 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add Sort" />
     <MESSAGE value="add Sort chapter" />
     <MESSAGE value="update sort folder and README.md" />
     <MESSAGE value="update swapSort.md for BubbleSort and QuickSort" />
-    <option name="LAST_COMMIT_MESSAGE" value="update swapSort.md for BubbleSort and QuickSort" />
+    <MESSAGE value="update swapSort.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="update swapSort.md" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2119" y="221" key="RollbackChangesDialog" timestamp="1632804241324">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="2119" y="221" key="RollbackChangesDialog/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1632804241324" />
-    <state x="1918" y="253" key="Vcs.Push.Dialog.v2" timestamp="1632810241011">
+    <state x="1918" y="253" key="Vcs.Push.Dialog.v2" timestamp="1632810356650">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1632810241011" />
-    <state x="2119" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1632810119091">
+    <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1632810356650" />
+    <state x="2119" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1632810636593">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="2119" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1632810119091" />
-    <state x="1989" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1632802663579">
+    <state x="2119" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1632810636593" />
+    <state x="1989" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1632842952321">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="1989" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1632802663579" />
+    <state x="1989" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1632842952321" />
   </component>
 </project>
