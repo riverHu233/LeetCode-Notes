@@ -2,7 +2,7 @@
 
 **按照方法的不同可分为**：  
 1、插入排序：直接插入排序、折半插入排序  
-2、[交换排序](sort/swapSort.md)：[冒泡排序BubbleSort](sort/swapSort.md:6)、[快速排序QuickSort](sort/swapSort.md:32)  
+2、[交换排序](./swapSort.md)：[冒泡排序BubbleSort](./swapSort.md:6)、[快速排序QuickSort](./swapSort.md:32)  
 3、选择排序：简单选择排序、堆排序HeapSort  
 4、归并排序MergeSort) 
 
