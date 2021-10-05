@@ -40,3 +40,52 @@ ORDER BY
 ```
 
 ---
+##### WHERE 子句 -- 对表中数据进行筛选
+语法：
+```
+SELECT 列名称  
+FROM 表名称  
+WHERE 列 运算符 值
+```
+可在WHERE子句中使用的运算符：  
+`=` : `等于`  
+`<>` : `不等于`  
+`>` : `大于` ,  &emsp;  `>=` : `大于等于`  
+`<` : `小于` ,  &emsp;  `<=` : `小于等于`  
+`BETWEEN` : `在某个范围内(包含两边的边界值)`  
+`LIKE` : `搜索某种模式`  
+
+
+---
+##### HAVING 子句
+在 SQL 中增加 HAVING 子句原因是，WHERE 关键字无法与聚合函数一起使用。
+
+SQL HAVING 语法
+```
+SELECT column_name, aggregate_function(column_name)
+FROM table_name
+WHERE column_name operator value
+GROUP BY column_name
+HAVING aggregate_function(column_name) operator value
+```
+
+---
+##### 聚合函数(Aggregate function)  
+聚合函数的操作面向一系列的值，并返回一个单一的值。具体函数和描述如下：    
+`AVG(column)` : `返回某列的平均值`  
+`COUNT(column)` : `返回某列的行数(不包括NULL值)`  
+`COUNT(DISTINCT column)` : `返回相异结果的数目`
+`COUNT(*)` : `返回被选中的行数`  
+`MAX(column)` : `返回某列的最高值`  
+`MIN(column)` : `返回某列的最低值`  
+`SUM(column)` : `返回某列的总和`  
+
+**注**: `COUNT(*)`是对选中的结果集做筛选，因此允许结果集中存在为NULL; 而`COUNT(column)`则是
+对某一列做统计，返回的是不包括NULL值的行数。
+
+---
+1、默认情况下，表的列可以存放NULL值。**无法使用比较运算符来测试NULL值，如 `=`，`<`或者`<>`，
+必须使用`IS NULL`和`IS NOT NULL`操作符**。  
+2、`LIMIT`子句用于限制查询结果返回的数量，常用于分页查询。(LIMIT n  OFFSET m 等同于 LIMIT 0, n； 
+其中，)  
+3、
