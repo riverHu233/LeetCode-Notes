@@ -133,3 +133,48 @@ class Solution:
 # 答：fast.next and fast.next.next 即保证 fast.next.next不为None; 而fast and fast.next 则只保证 fast = fast.next.next
 表达式可执行，并不保证 fast.next.next不为None, 相应的判断则等到下一次循环
 ```
+
+####[判断一个链表是否有环II LeetCode.142](https://leetcode-cn.com/problems/linked-list-cycle-ii/)
+```
+# 思路1：使用哈希表存储节点，一旦节点出现2次，则说明该节点为入环的第一个节点
+# 时间复杂度：O(N)，空间复杂度：O(N)
+# 时间：15mins
+
+class Solution:
+    def detectCycle(self, head: ListNode) -> ListNode:
+        nodeSets = set()
+        while head:
+            if head in nodeSets:
+                return head
+            nodeSets.add(head)
+            head = head.next
+        return None
+
+# 思路2：快慢指针--快指针移动2步，慢指针移动1步；如果有环，则必相遇
+# 问题：假设链表到入口长度为a, 环的长度为b，则当快慢指针相遇时，
+# 快指针走的长度为慢指针的2倍： f = 2s
+# 快指针走的长度为慢指针的长度加上n圈的环：f = s + nb
+# 解等式有： s = nb
+# 由于从链表到入口的长度为a, 因此 a + nb 即链表的入口(即慢指针走进环 n 圈并在入口停下)
+# 因此，可以理解为当快慢指针相遇时，慢指针再走 a 步即可到达入口
+# 时间复杂度：O(N)  空间复杂度：O(1)
+# 时间：50mins
+class Solution:
+    def detectCycle(self, head: ListNode) -> ListNode:
+        fast, slow = head, head
+        while fast:
+            if not fast.next:
+                return None
+            fast = fast.next.next
+            slow = slow.next
+            if fast == slow:  # 相遇
+                # 新指针从链表头出发a个位置，与slow指针相遇
+                ptr = head
+                while True:
+                    # 先判断是否相等，再执行移动，如果链表本身为环的话，则相遇位置就是链表入口
+                    if ptr == slow:
+                        return slow
+                    ptr = ptr.next
+                    slow = slow.next
+        return None
+```
