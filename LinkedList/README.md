@@ -99,6 +99,9 @@ class MyLinkedList:
 ```
 
 ####[判断一个链表是否有环LeetCode.141](https://leetcode-cn.com/problems/linked-list-cycle/)
+**判断链表是否有环，主要有2种思路：**
++ 采用哈希表来记录访问过的结点，如果存在重复访问的节点，则有环
++ 采用快慢指针，快指针的速度是慢指针的2倍，如果快指针最终与慢指针相遇，则有环
 ```
 # Definition for singly-linked list.
 # class ListNode:
