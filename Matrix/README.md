@@ -17,6 +17,10 @@ class Solution:
                 flip_image[i][j] = 0 if flip_image[i][j]==1 else 1
         
         return flip_image
+
+思考：图像关于1和0的翻转，有2种思路
+1、用 1- 当前值， 得到 0 和 1 的翻转
+2、用 1^ 当前值， 得到 0 和 1 的反转，其中 ^ 表示异或操作，相同为0，相异为1
 ```
 
 [867.转置矩阵](https://leetcode-cn.com/problems/transpose-matrix/)
