@@ -18,6 +18,7 @@
   <component name="ChangeListManager">
     <list default="true" id="450c3fb0-c2cc-4673-8993-39c081dae2dd" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort/InsertSort.md" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/InsertSort.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +201,21 @@
       <option name="project" value="LOCAL" />
       <updated>1633523016557</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="create Insert sort">
+      <created>1633537073040</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1633537073040</updated>
+    </task>
+    <task id="LOCAL-00022" summary="update">
+      <created>1633537096533</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1633537096533</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,6 +259,7 @@
     <MESSAGE value="update sql" />
     <MESSAGE value="update sql concepts" />
     <MESSAGE value="update README" />
+    <MESSAGE value="create Insert sort" />
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
@@ -256,10 +272,10 @@
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="1827" y="164" key="SettingsEditor/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1632873329222" />
-    <state x="1918" y="253" key="Vcs.Push.Dialog.v2" timestamp="1633523024082">
+    <state x="1918" y="253" key="Vcs.Push.Dialog.v2" timestamp="1633537105480">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1633523024082" />
+    <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1633537105480" />
     <state x="2119" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1632810636593">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
