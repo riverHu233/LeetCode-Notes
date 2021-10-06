@@ -138,6 +138,8 @@ class Solution:
 ```
 
 ####[判断一个链表是否有环II LeetCode.142](https://leetcode-cn.com/problems/linked-list-cycle-ii/)
++ 思路1：使用哈希表来记录访问过的节点，一旦链表有环，返回重复访问的该节点  Time: O(N)  Space: O(N)
++ 思路2：使用快慢指针  Time: O(N)  Space: O(1)
 ```
 # 思路1：使用哈希表存储节点，一旦节点出现2次，则说明该节点为入环的第一个节点
 # 时间复杂度：O(N)，空间复杂度：O(N)
