@@ -19,17 +19,17 @@
 关于Join的解读参见[Inner Join vs. Outer Join](https://www.diffen.com/difference/Inner_Join_vs_Outer_Join)
 
 ---
-**当一个查询语句同时出现了WHERE, GROUP BY, HAVING, ORDER BY的时候， 相应的执行顺序和
-编写顺序：**  
+**当一个查询语句同时出现了WHERE, GROUP BY, HAVING, ORDER BY的时候， 相应的执行顺序和编写顺序：**  
 **执行顺序：**   
-1、执行`WHERE xx`对全表数据做筛选，返回第一个结果集  
+1、执行`WHERE xx`对全表数据(先`FROM`表)做筛选，返回第一个结果集  
 2、针对第一个结果集使用`GROUP BY`分组，返回第二个结果集  
 3、针对第二个结果集中的每一组数据执行`SELECT xx`  
 4、针对第三个结果集执行`HAVING xx`筛选，返回第四个结果集  
 5、针对第四个结果集按照升序(ASC)或者降序(DESC)进行排序  
-即 WHERE >> GROUP BY >> HAVING >> ORDER BY
+FROM >> WHERE >> GROUP BY >> HAVING >> SELECT >> ORDER BY
 
 **编写顺序：**  
+SELECT >> FROM >> WHERE >> GROUP BY >> HAVING >> ORDER BY
 ```
 SELECT  
 FROM  
