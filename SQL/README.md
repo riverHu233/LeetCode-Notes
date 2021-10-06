@@ -84,6 +84,43 @@ HAVING aggregate_function(column_name) operator value
 对某一列做统计，返回的是不包括NULL值的行数。
 
 ---
+##### 向表格插入新的行和将列插入新表
+**INSERT INTO 语句用于向表格中插入新的行。**
+```
+INSERT INTO table_name VALUES (值1, 值2,....)
+指定所要插入数据的列：
+INSERT INTO table_name (列1, 列2,...) VALUES (值1, 值2,....)
+```
+**SELECT INTO 语句从一个表中选取数据，然后把数据插入另一个表中。常用于创建表的备份复件或者用于对记录进行存档。**
+```
+把所有的列插入新表 
+SELECT *
+INTO new_table_name [IN externaldatabase] 
+FROM old_tablename
+只把希望的列插入新表 
+SELECT column_name(s)
+INTO new_table_name [IN externaldatabase] 
+FROM old_tablename
+```
+
+---
+#### ALTER 关键字
+CHANGE 用来修改字段名字以及类型  
+MODIFY 用来修改字段类型  
+ALTER COLUMN ... SET  用来修改字段数据  
+DROP 用来删除相应的字段  
+RENAME TO 用来修改表名  
+```
+ALTER TABLE <表名> [修改选项]
+{ ADD COLUMN <列名> <类型>
+| CHANGE COLUMN <旧列名> <新列名> <新列类型>
+| ALTER COLUMN <列名> { SET DEFAULT <默认值> | DROP DEFAULT }
+| MODIFY COLUMN <列名> <类型>
+| DROP COLUMN <列名>
+| RENAME TO <新表名> }
+```
+
+---
 1、默认情况下，表的列可以存放NULL值。**无法使用比较运算符来测试NULL值，如 `=`，`<`或者`<>`，
 必须使用`IS NULL`和`IS NOT NULL`操作符**。  
 2、`LIMIT`子句用于限制查询结果返回的数量，常用于分页查询。(LIMIT n  OFFSET m 等同于 LIMIT 0, n； 
