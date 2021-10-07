@@ -16,9 +16,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="450c3fb0-c2cc-4673-8993-39c081dae2dd" name="Default Changelist" comment="update">
+    <list default="true" id="450c3fb0-c2cc-4673-8993-39c081dae2dd" name="Default Changelist" comment="update quick sort">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sort/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort/mergeSort.md" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/mergeSort.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +243,42 @@
       <option name="project" value="LOCAL" />
       <updated>1633539525434</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="update sort readme">
+      <created>1633539719388</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1633539719388</updated>
+    </task>
+    <task id="LOCAL-00028" summary="update">
+      <created>1633539731362</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1633539731362</updated>
+    </task>
+    <task id="LOCAL-00029" summary="update quick sort">
+      <created>1633572465575</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1633572465575</updated>
+    </task>
+    <task id="LOCAL-00030" summary="update quick sort">
+      <created>1633573744760</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1633573744760</updated>
+    </task>
+    <task id="LOCAL-00031" summary="update quick sort">
+      <created>1633573769176</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1633573769176</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -289,8 +324,10 @@
     <MESSAGE value="update README" />
     <MESSAGE value="create Insert sort" />
     <MESSAGE value="update insert sort" />
+    <MESSAGE value="update sort readme" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="update quick sort" />
+    <option name="LAST_COMMIT_MESSAGE" value="update quick sort" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2119" y="221" key="RollbackChangesDialog" timestamp="1632804241324">
@@ -301,10 +338,10 @@
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="1827" y="164" key="SettingsEditor/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1632873329222" />
-    <state x="1918" y="253" key="Vcs.Push.Dialog.v2" timestamp="1633539531130">
+    <state x="1918" y="253" key="Vcs.Push.Dialog.v2" timestamp="1633572474091">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1633539531130" />
+    <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1633572474091" />
     <state x="2119" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1632810636593">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
