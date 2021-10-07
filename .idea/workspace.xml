@@ -16,9 +16,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="450c3fb0-c2cc-4673-8993-39c081dae2dd" name="Default Changelist" comment="update quick sort">
+    <list default="true" id="450c3fb0-c2cc-4673-8993-39c081dae2dd" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sort/mergeSort.md" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/mergeSort.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +278,21 @@
       <option name="project" value="LOCAL" />
       <updated>1633573769176</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="update merge sort">
+      <created>1633581473921</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1633581473921</updated>
+    </task>
+    <task id="LOCAL-00033" summary="update">
+      <created>1633581482639</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1633581482639</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -325,9 +339,10 @@
     <MESSAGE value="create Insert sort" />
     <MESSAGE value="update insert sort" />
     <MESSAGE value="update sort readme" />
-    <MESSAGE value="update" />
     <MESSAGE value="update quick sort" />
-    <option name="LAST_COMMIT_MESSAGE" value="update quick sort" />
+    <MESSAGE value="update merge sort" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2119" y="221" key="RollbackChangesDialog" timestamp="1632804241324">
