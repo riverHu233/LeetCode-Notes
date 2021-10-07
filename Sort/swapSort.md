@@ -62,6 +62,14 @@ class Solution:
         return nums
 
     def partition(self, nums, low, high):
+        '''
+        arr: 待排序的序列，注意不是子序列，而是原序列
+        low: 待排子序列的起始位置
+        high: 待排子序列的终止位置
+
+        return： 返回基准元素最终放置的位置
+        '''
+
         # 设置当前第一个元素作为基准元素，此时nums[low]空缺，
         # 因此先从高到底遍历，找到比pivot小的元素放到pivot位置上
         pivot = nums[low]
