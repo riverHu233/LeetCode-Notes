@@ -1,7 +1,8 @@
 # LeetCode-Notes
 
 #### ToDo List
-- [ ] MergeSort and HeapSort
+- [x] MergeSort 
+- [ ] HeapSort
 - [ ] 背包问题
 
 ---
