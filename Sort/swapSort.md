@@ -63,7 +63,7 @@ class Solution:
 
     def partition(self, nums, low, high):
         '''
-        arr: 待排序的序列，注意不是子序列，而是原序列
+        nums: 待排序的序列，注意不是子序列，而是原序列
         low: 待排子序列的起始位置
         high: 待排子序列的终止位置
 
