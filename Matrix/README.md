@@ -127,8 +127,6 @@ class Solution:
                 matrix[i][col] = 0
             for j in range(n):
                 matrix[row][j] = 0
-        
-        return matrix
 
 
 # 改进思路：遍历矩阵找到为0的元素，使用2个list分别记录需要置为0的行和列，
@@ -156,8 +154,6 @@ class Solution:
             for i in range(m):
                 print(matrix[i][col])
                 matrix[i][col] = 0
-
-        return matrix
 
 
 # 改进思路：采用矩阵的第一行和第一列作为标志位来记录置0的列和行，同时设立2个
@@ -201,6 +197,4 @@ class Solution:
         if col0_zeroFlag:
             for i in range(rows):
                 matrix[i][0] = 0
-        
-        return matrix
 ```
