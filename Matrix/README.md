@@ -198,3 +198,151 @@ class Solution:
             for i in range(rows):
                 matrix[i][0] = 0
 ```
+
+[73.矩阵置零](https://leetcode-cn.com/problems/set-matrix-zeroes/)
+
+```
+# 思路：找到矩阵中所有为0的元素，并使用列表记下相应的行和列，
+# 遍历该列表，将相应的行和列置为0
+# Time: O(MN)  Space: O(MN)
+# 时间：8mins
+class Solution:
+    def setZeroes(self, matrix: List[List[int]]) -> None:
+        '''
+        Do not return anything, modify matrix in-place instead.
+        '''
+        zeroLists = []
+        m, n = len(matrix), len(matrix[0])
+        for i in range(m):
+            for j in range(n):
+                if matrix[i][j] == 0:
+                    zeroLists.append((i,j))
+        # 遍历列表
+        for pos in zeroLists:
+            row, col = pos
+            for i in range(m):
+                matrix[i][col] = 0
+            for j in range(n):
+                matrix[row][j] = 0
+
+
+# 思路：遍历矩阵找到为0的元素，使用2个list分别记录需要置为0的行和列，
+# 最多需要 m + n个额外空间
+# Time: O(MN)  Space: O(M+N)
+# 时间：18mins
+class Solution:
+    def setZeroes(self, matrix: List[List[int]]) -> None:
+        '''
+        Do not return anything, modify matrix in-place instead.
+        '''
+        zeroRows, zeroCols = set(), set()
+        m, n = len(matrix), len(matrix[0])
+        for i in range(m):
+            for j in range(n):
+                if matrix[i][j] == 0:
+                    zeroRows.add(i)
+                    zeroCols.add(j)
+                # 遍历列表
+        # 将相应的行列置零
+        for row in zeroRows:
+            for j in range(n):
+                matrix[row][j] = 0
+        for col in zeroCols:
+            for i in range(m):
+                print(matrix[i][col])
+                matrix[i][col] = 0
+
+
+# 改进思路：采用矩阵的第一行和第一列作为标志位来记录置0的列和行，同时设立2个
+# 标志位来记录第一行和第一列是否为0
+# Time: O(MN)  Space: O(1)
+# 时间：40mins
+class Solution:
+    def setZeroes(self, matrix: List[List[int]]) -> None:
+        '''
+        Do not return anything, modify matrix in-place instead.
+        '''
+        row0_zeroFlag, col0_zeroFlag = False, False
+        rows, cols = len(matrix), len(matrix[0])
+        for i in range(rows):
+            for j in range(cols):
+                # 如果第0行或者第0列存在元素为0，则将相应的标志位置为True
+                if matrix[i][j] == 0 and i==0:
+                    row0_zeroFlag = True
+                if matrix[i][j] == 0 and j==0:
+                    col0_zeroFlag = True
+                if matrix[i][j] == 0:
+                    # 将相应的行和列置为0
+                    matrix[0][j] = 0
+                    matrix[i][0] = 0
+        
+        # 访问第一行，将第一列往后相应的列置为0
+        for j in range(1, cols):
+            if matrix[0][j] == 0:
+                for i in range(1, rows):
+                    matrix[i][j] = 0
+        # 访问第一列，将第一行往后的相应的行置为0
+        for i in range(1, rows):
+            if matrix[i][0] == 0:
+                for j in range(1, cols):
+                    matrix[i][j] = 0
+        # 如果row0_zer0Flag为True, 将第一行置为0
+        if row0_zeroFlag:
+            for j in range(cols):
+                matrix[0][j] = 0
+        # 如果cols_zeroFlag为True，将第一列置为0
+        if col0_zeroFlag:
+            for i in range(rows):
+                matrix[i][0] = 0
+```
+
+[48.旋转图像](https://leetcode-cn.com/problems/rotate-image/)
+
+```
+# 思路：要实现对矩阵的原地旋转90度且原地修改，则必须同时
+# 移动n个位置的元素进行交换, 即 [i, j]--> [j, n-i-1] --> [n-i-1, n-j-1] --> [n-j-1, i]
+# 如例1所示，1-->3-->9-->7旋转为 7-->1-->3-->9, 坐标变换为[0,0]-->[0, 2]-->[2, 2]-->[2, 0]
+# 通过添加临时变量temp，一次性交换4个元素，通过遍历完成旋转，同时需要分清矩阵奇偶的情况
+# Time: O(N2)  Space: O(1)
+# 时间：50mins
+class Solution:
+    def rotate(self, matrix: List[List[int]]) -> None:
+        """
+        Do not return anything, modify matrix in-place instead.
+        """
+        n = len(matrix)
+        # n为奇偶时，所旋转的面积不一样
+        for i in range(n//2):
+            for j in range((n+1)//2):
+                # 交换
+                temp = matrix[i][j]
+                matrix[i][j] = matrix[n-j-1][i]
+                matrix[n-j-1][i] = matrix[n-i-1][n-j-1]
+                matrix[n-i-1][n-j-1] = matrix[j][n-i-1]
+                matrix[j][n-i-1] = temp
+
+
+# 思路：对图像先按照副对角线翻转，再水平翻转即可得到顺时针旋转90度的图像
+# Time: O(N2)  Space: O(1)
+# 时间：45mins
+class Solution:
+    def rotate(self, matrix: List[List[int]]) -> None:
+        """
+        Do not return anything, modify matrix in-place instead.
+        """
+        n = len(matrix) - 1
+        # 第一步：水平翻转 [i,j] <--> [n-i,j]
+        for i in range((n+1)//2):
+            for j in range(n+1):
+                # 交换
+                temp = matrix[i][j]
+                matrix[i][j] = matrix[n-i][j]
+                matrix[n-i][j] = temp
+        # 第二步：主对角线翻转 [i,j] <--> [j, i]
+        for i in range(n+1):
+            for j in range(i, n+1):
+                # 交换
+                temp = matrix[i][j]
+                matrix[i][j] = matrix[j][i]
+                matrix[j][i] = temp
+```
