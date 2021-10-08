@@ -101,3 +101,106 @@ class Solution:
                 break
         return res
 ```
+
+[73.矩阵置零](https://leetcode-cn.com/problems/set-matrix-zeroes/)
+
+```
+# 思路：找到矩阵中所有为0的元素，并使用列表记下相应的行和列，
+# 遍历该列表，将相应的行和列置为0
+# Time: O(MN)  Space: O(MN)
+# 时间：8mins
+class Solution:
+    def setZeroes(self, matrix: List[List[int]]) -> None:
+        """
+        Do not return anything, modify matrix in-place instead.
+        """
+        zeroLists = []
+        m, n = len(matrix), len(matrix[0])
+        for i in range(m):
+            for j in range(n):
+                if matrix[i][j] == 0:
+                    zeroLists.append((i,j))
+        # 遍历列表
+        for pos in zeroLists:
+            row, col = pos
+            for i in range(m):
+                matrix[i][col] = 0
+            for j in range(n):
+                matrix[row][j] = 0
+        
+        return matrix
+
+
+# 改进思路：遍历矩阵找到为0的元素，使用2个list分别记录需要置为0的行和列，
+# 最多需要 m + n个额外空间
+# Time: O(MN)  Space: O(M+N)
+# 时间：18mins
+class Solution:
+    def setZeroes(self, matrix: List[List[int]]) -> None:
+        """
+        Do not return anything, modify matrix in-place instead.
+        """
+        zeroRows, zeroCols = set(), set()
+        m, n = len(matrix), len(matrix[0])
+        for i in range(m):
+            for j in range(n):
+                if matrix[i][j] == 0:
+                    zeroRows.add(i)
+                    zeroCols.add(j)
+                # 遍历列表
+        # 将相应的行列置零
+        for row in zeroRows:
+            for j in range(n):
+                matrix[row][j] = 0
+        for col in zeroCols:
+            for i in range(m):
+                print(matrix[i][col])
+                matrix[i][col] = 0
+
+        return matrix
+
+
+# 改进思路：采用矩阵的第一行和第一列作为标志位来记录置0的列和行，同时设立2个
+# 标志位来记录第一行和第一列是否为0
+# Time: O(MN)  Space: O(1)
+# 时间：
+class Solution:
+    def setZeroes(self, matrix: List[List[int]]) -> None:
+        """
+        Do not return anything, modify matrix in-place instead.
+        """
+        row0_zeroFlag, col0_zeroFlag = False, False
+        rows, cols = len(matrix), len(matrix[0])
+        for i in range(rows):
+            for j in range(cols):
+                # 如果第0行或者第0列存在元素为0，则将相应的标志位置为True
+                if matrix[i][j] == 0 and i==0:
+                    row0_zeroFlag = True
+                if matrix[i][j] == 0 and j==0:
+                    col0_zeroFlag = True
+                if matrix[i][j] == 0:
+                    # 将相应的行和列置为0
+                    matrix[0][j] = 0
+                    matrix[i][0] = 0
+        
+        # 访问第一行，将第一列往后相应的列置为0
+        for j in range(1, cols):
+            if matrix[0][j] == 0:
+                for i in range(1, rows):
+                    matrix[i][j] = 0
+        # 访问第一列，将第一行往后的相应的行置为0
+        for i in range(1, rows):
+            if matrix[i][0] == 0:
+                for j in range(1, cols):
+                    matrix[i][j] = 0
+        # 如果row0_zer0Flag为True, 将第一行置为0
+        if row0_zeroFlag:
+            for j in range(cols):
+                matrix[0][j] = 0
+        # 如果cols_zeroFlag为True，将第一列置为0
+        if col0_zeroFlag:
+            for i in range(rows):
+                matrix[i][0] = 0
+        
+        return matrix
+```
