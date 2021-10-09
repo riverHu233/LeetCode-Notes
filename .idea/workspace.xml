@@ -16,10 +16,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="450c3fb0-c2cc-4673-8993-39c081dae2dd" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Matrix/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="450c3fb0-c2cc-4673-8993-39c081dae2dd" name="Default Changelist" comment="update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -376,7 +373,21 @@
       <option name="project" value="LOCAL" />
       <updated>1633660760625</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="update rotate-image inplace op">
+      <created>1633701278599</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1633701278600</updated>
+    </task>
+    <task id="LOCAL-00047" summary="update">
+      <created>1633701287159</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1633701287159</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -404,7 +415,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update sort folder and README.md" />
     <MESSAGE value="update swapSort.md for BubbleSort and QuickSort" />
     <MESSAGE value="update swapSort.md" />
     <MESSAGE value="create SQL chapter" />
@@ -428,6 +438,7 @@
     <MESSAGE value="update readme" />
     <MESSAGE value="update network" />
     <MESSAGE value="update matrix" />
+    <MESSAGE value="update rotate-image inplace op" />
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
@@ -440,10 +451,10 @@
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="1827" y="164" key="SettingsEditor/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1632873329222" />
-    <state x="1918" y="253" key="Vcs.Push.Dialog.v2" timestamp="1633660778911">
+    <state x="1918" y="253" key="Vcs.Push.Dialog.v2" timestamp="1633701313629">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1633660778911" />
+    <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1633701313629" />
     <state x="2119" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1632810636593">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
