@@ -18,7 +18,6 @@
   <component name="ChangeListManager">
     <list default="true" id="450c3fb0-c2cc-4673-8993-39c081dae2dd" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,27 +59,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632734536827</updated>
-    </task>
-    <task id="LOCAL-00001" summary="add Sort">
-      <created>1632803890455</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1632803890455</updated>
-    </task>
-    <task id="LOCAL-00002" summary="add Sort chapter">
-      <created>1632804038978</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1632804038978</updated>
-    </task>
-    <task id="LOCAL-00003" summary="update sort folder and README.md">
-      <created>1632810108228</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1632810108228</updated>
     </task>
     <task id="LOCAL-00004" summary="update swapSort.md for BubbleSort and QuickSort">
       <created>1632810228648</created>
@@ -404,7 +382,28 @@
       <option name="project" value="LOCAL" />
       <updated>1633757126460</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="update readme">
+      <created>1633967403647</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1633967403648</updated>
+    </task>
+    <task id="LOCAL-00051" summary="update traverse">
+      <created>1633967418935</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1633967418935</updated>
+    </task>
+    <task id="LOCAL-00052" summary="update">
+      <created>1633967428280</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1633967428280</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -432,7 +431,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update swapSort.md for BubbleSort and QuickSort" />
     <MESSAGE value="update swapSort.md" />
     <MESSAGE value="create SQL chapter" />
     <MESSAGE value="singly-link list" />
@@ -452,14 +450,19 @@
     <MESSAGE value="update merge sort" />
     <MESSAGE value="update two sum" />
     <MESSAGE value="update index" />
-    <MESSAGE value="update readme" />
     <MESSAGE value="update network" />
     <MESSAGE value="update rotate-image inplace op" />
     <MESSAGE value="update matrix" />
+    <MESSAGE value="update readme" />
+    <MESSAGE value="update traverse" />
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2058" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1633967813123">
+      <screen x="1366" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2058" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1633967813123" />
     <state x="2119" y="221" key="RollbackChangesDialog" timestamp="1632804241324">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
@@ -468,10 +471,10 @@
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
     <state x="1827" y="164" key="SettingsEditor/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1632873329222" />
-    <state x="1918" y="253" key="Vcs.Push.Dialog.v2" timestamp="1633757140862">
+    <state x="1918" y="253" key="Vcs.Push.Dialog.v2" timestamp="1633967435367">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
-    <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1633757140862" />
+    <state x="1918" y="253" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1633967435367" />
     <state x="2119" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1632810636593">
       <screen x="1366" y="0" width="1920" height="1040" />
     </state>
