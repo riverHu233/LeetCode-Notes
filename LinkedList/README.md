@@ -183,3 +183,108 @@ class Solution:
                     slow = slow.next
         return None
 ```
+
+[LC.234. 回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/)
+```
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def isPalindrome(self, head: ListNode) -> bool:
+        """
+        思路：遍历链表, 然后将链表中的所有值按顺序存储，然后直接判断
+        是否与逆序元素相等，即可
+        Time: O(N)  Space: O(N)
+        """
+        res, cur = [], head
+        while cur:
+            res.append(cur.val)
+            cur = cur.next
+        return res == res[::-1]
+
+class Solution:
+    def isPalindrome(self, head: ListNode) -> bool:
+        """
+        思路二：Step1: 复制一个新的链表  Step2: 将新链表逆序  
+        Step3: 将新链表和原链表同时遍历，若不相同则返回False
+        Time: O(3N)  Space：O(N)
+        """
+        # 复制链表
+        def copyList(head):
+            cur = head
+            newList, tail = None, None
+            while cur:
+                # 如果是第一个结点
+                if newList is None:
+                    # newList指向头节点
+                    newList = ListNode(cur.val)
+                    # tail指向尾节点，方便使用尾插法插入
+                    tail = newList
+                else:
+                    # 尾插法插入节点
+                    tail.next = ListNode(cur.val)
+                    tail = tail.next
+                cur = cur.next
+            return newList
+        
+        newList = copyList(head)
+        # 链表逆序
+        def reversedList(head):
+            prev, cur = None, head
+            while cur:
+                temp = cur.next
+                cur.next = prev
+                prev = cur
+                cur = temp
+            return prev
+        rev = reversedList(newList)
+
+        def printList(head):
+            ptr = head
+            while ptr:
+                print(ptr.val, end=' —> ')
+                ptr = ptr.next
+
+        # 同时遍历2个链表，判断是否完全相同
+        while rev and head:
+            if rev.val != head.val:
+                return False
+            rev, head = rev.next, head.next
+        return True
+
+# Solution 3: 双指针 + 中点 + 翻转链表
+class Solution:
+    def isPalindrome(self, head: ListNode) -> bool:
+        """
+        思路：Step1：使用双指针找到链表的中点；
+        Step2: 对链表后半部分进行逆序
+        Step3: 同时从起点和中点开始遍历，判断是否相同
+        Time: O(N)   Space: O(1)
+        """
+        # 链表逆序
+        def reversedList(head):
+            prev, cur = None, head
+            while cur:
+                temp = cur.next
+                cur.next = prev
+                prev = cur
+                cur = temp
+            return prev
+
+        # 双指针找到中点位置
+        slow, fast = head, head
+        while fast.next and fast.next.next:
+            slow = slow.next
+            fast = fast.next.next
+
+        # 对后半部分进行逆序
+        rev = reversedList(slow)
+        # rev的长度即为遍历的长度
+        while head and rev:
+            if head.val != rev.val:
+                return False
+            head, rev = head.next, rev.next
+        return True
+```
