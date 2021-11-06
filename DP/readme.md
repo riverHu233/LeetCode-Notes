@@ -30,3 +30,36 @@ class Solution:
         return maxSide*maxSide
 ```
 
+[121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)
++ 解法1：暴力求解(TLE)。遍历求解第i天买进，第j天卖出，其中i<j。 Time:O(n2)  Space:O(1)
++ 解法2：动态规划。利用minPrice记录当前的股票最低价格，同时利用maxProfit来记录当前以最低价卖出的最大利润，
+执行顺序为0-n, 最后返回最大利润即可。 Time:O(n)  Space:O(1)
+```
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        """
+        暴力求解：计算从第n天开始卖出的最大利润
+        Time: O(n2)  Space: O(1)
+        时间：5mins(TLE)
+        """
+        maxProfit = 0
+        for i in range(len(prices)):
+            for j in range(i, len(prices)):
+                maxProfit = max(maxProfit, prices[j]-prices[i])
+        return maxProfit
+
+# 动态规划
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        """
+        使用minPrices记录当前的最低股价，使用maxProfit来记录当前的最大利益
+        执行的顺序：从左至右
+        Time: O(N)  Space: O(1)
+        时间：5mins
+        """
+        maxProfit, minPrice = 0, int(1e9)   # 用一个大数来表示即可
+        for price in prices:
+            maxProfit = max(maxProfit, price-minPrice)
+            minPrice = min(price, minPrice)
+        return maxProfit
+```
