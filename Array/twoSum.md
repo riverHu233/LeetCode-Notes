@@ -36,6 +36,36 @@ class Solution:
 ```
 
 [ThreeSum](https://leetcode-cn.com/problems/3sum/)
++ 思路：排序+双指针。 Time:O(n2), Space:O(1)
 ```
-
+class Solution:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        """
+        排序+双指针：题目不需要返回数组下标，先对数组进行排序，然后使用双指针进行搜索
+        问题：如何去除重复解(暴力法无法避免重复解) -- 
+        双指针法：其中 a = -(b+c) = target, b从左边开始取值，c从右边开始取值，
+        当 b+c大于target时，需要缩小b+c的和，将c的指针左移，最终，b > c 退出循环。
+        如何避免重复解：1, 当a 当前取值和 a+1取值相同时，a ++ 
+                        2, b 当前取值和 b+1取值相同时，b ++ 
+        Time: O(n2)  Space: O(n)
+        """
+        ans = []
+        # 数组排序
+        nums.sort()
+        for i in range(len(nums)):
+            if i>0 and nums[i] == nums[i-1]:
+                continue
+            target = - nums[i]
+            k = len(nums) - 1
+            for j in range(i+1, len(nums)):
+                if j>i+1 and nums[j] == nums[j-1]:
+                    continue
+                while j<k and (nums[k] + nums[j]) > target:
+                    k -= 1
+                # 终止条件
+                if j == k:
+                    break
+                if (nums[k] + nums[j]) == target:
+                    ans.append([nums[i], nums[j], nums[k]])
+        return ans
 ```
