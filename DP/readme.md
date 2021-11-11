@@ -237,3 +237,6 @@ class Solution:
         memo[root] = max(money, self.rob(root.left)+self.rob(root.right))
         return memo[root]
 ```
+
+#### 二维动态规划问题
+[1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)
