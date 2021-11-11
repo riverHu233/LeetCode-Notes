@@ -47,7 +47,7 @@ class Solution:
 待排序表头、中间和末尾3个元素取平均作为基准；或者随机从当前表中选择基准元素，从而让最坏情况几乎不会发生。
 
 ```
-# 快速排序(超出时间限制)
+# 快速排序(超出时间限制)--这是由于当数组有序时，快速排序将退化成普通交换排序，时间复杂度为O(n2)
 # 时间复杂度(最好)：O(nlogn) 最差O(n2)  空间复杂度：O(logn)
 
 class Solution:
@@ -89,4 +89,44 @@ class Solution:
         nums[low] = pivot
         # 返回pivot最终的位置
         return low
+```
+
+#### 针对快速排序遇到有序数组退化的问题，可采用随机选取主元pivot来解决该问题
+**通过随机选取枢轴元素pivot来避免最坏情况的发生**，主要改动在于partition函数中随机选取pivot，然后将选取元素与`arr[low]`位置元素
+进行交换，其余部分保持不变。
+```
+class Solution:
+    def sortArray(self, nums: List[int]) -> List[int]:
+        """
+        快速排序--Time:O(nlog2n)  Space:O(log2n) -- 通过测试
+        """
+        import random
+        def partition(arr, low, high):
+            """
+            随机挑选序列中的元素作为pivot
+            """
+            rnd = random.randint(low, high)
+            # 交换rnd和最左侧元素位置
+            arr[rnd], arr[low] = arr[low], arr[rnd]
+            pivot = arr[low]
+            while low<high:
+                # 注意要添加小于等于号，否则当出现pivot和比较元素相同时陷入死循环
+                while low<high and arr[high]>=pivot:
+                    high -= 1
+                arr[low] = arr[high]
+                while low<high and arr[low]<pivot:
+                    low += 1
+                arr[high] = arr[low]
+            arr[low] = pivot
+            return low
+
+        def quickSort(arr, low, high):
+            if low<high:
+                pivotPos = partition(arr, low, high)
+                quickSort(arr, low, pivotPos-1)
+                quickSort(arr, pivotPos+1, high)
+        
+        low, high = 0, len(nums)-1
+        quickSort(nums, low, high)
+        return nums
 ```
