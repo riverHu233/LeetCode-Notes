@@ -7,7 +7,7 @@
 辅助数组空间和递归调用所占用的O(log2n)的栈空间**
 
 [LC.912](https://leetcode-cn.com/problems/sort-an-array/)
-
+**第一种方法超时**
 ```
 # 归并排序(Merge): 归并是将两个或两个以上的有序表组合成一个新的有序表。
 # 假定待排序表含有n个记录，可将其视为n个有序的子表，然后两两归并，直到合并为
@@ -59,6 +59,44 @@ class Solution:
                 mergeSort(arr, mid+1, high)
                 merge(arr, low, mid, high)
         
+        mergeSort(nums, 0, len(nums)-1)
+        return nums
+```
+
+**可能是上面方法通过每次给arr数组赋值的方法速度较慢，因此采用temp临时数组将排序的数组存储起来，待排序完成后直接赋值给arr数组，该
+方法可通过**
+```
+# 针对归并排序进行改进，采用空数组来存储有序元素，待排序完成后再将数组复制给arr
+class Solution:
+    def sortArray(self, nums: List[int]) -> List[int]:
+        """
+        归并排序改进
+        """
+        def merge(arr, low, mid, high):
+            temp = []
+            i, j = low, mid+1
+            while i<=mid and j<=high:
+                if arr[i] < arr[j]:
+                    temp.append(arr[i])
+                    i += 1
+                else:
+                    temp.append(arr[j])
+                    j += 1
+            while i<=mid:
+                temp.append(arr[i])
+                i += 1
+            while j<=high:
+                temp.append(arr[j])
+                j += 1
+            arr[low:high+1] = temp
+        
+        def mergeSort(arr, low, high):
+            if low<high:
+                mid = (low + high) // 2
+                mergeSort(arr, low, mid)
+                mergeSort(arr, mid+1, high)
+                merge(arr, low, mid, high)
+
         mergeSort(nums, 0, len(nums)-1)
         return nums
 ```
