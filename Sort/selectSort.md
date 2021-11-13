@@ -30,6 +30,10 @@ class Solution:
 **算法思想**：堆排序是一种**树形选择排序**方法。特点：将待排序序列视为一棵**完全二叉树**的顺序存储结构，利用完全二叉树中双亲节点和孩子节点
 之间的内在关系，再当前无序区中选择关键字最大(或最小)的元素。
 
+**堆排序的2个问题**：  
+1、如何由一个无序序列建成一个堆？(如何建堆，通过向上调整方法构成一个堆)  
+2、如何输出堆顶元素之后，调整剩余元素成为一个新的堆？(交换堆底元素和堆顶元素，进行向下调整)
+
 **堆的定义**：  
 小根堆：L(i)<=L(2i) 且 L(i)<=L(2i+1)  (1<=i<= n//2)  
 大根堆：L(i)>=L(2i) 且 L(i)>=L(2i+1)  (1<=i<= n//2)  
@@ -54,3 +58,46 @@ class Solution:
 **插入操作**：先**将新结点放在堆的末端**，再对这个新结点执行**向上调整操作**。
 
 #### 堆的应用：堆经常被用来实现优先级队列，优先级队列常用于操作系统的作业调度和消息队列等
+
+[912. 排序数组](https://leetcode-cn.com/problems/sort-an-array/)
+```
+# 建堆算法
+def maxHeapify(arr, i, heapSize):
+    # 将元素k位置通过向下进行调整使其满足大根堆特性
+    # 此时序列[i, heapSize-1]中除关键字i外均满足堆的定义
+    j, temp = 2*i+1, arr[i]
+    while j <= heapSize-1:
+        if j < heapSize-1 and arr[j] < arr[j+1]:
+            j += 1
+        if temp >= arr[j]:
+            break
+        else:
+            arr[i] = arr[j]
+            i = j
+        # 从0开始，因此下一个根节点为2*j+1
+        j = j*2+1
+    arr[i] = temp
+
+def buildMaxHeap(arr):
+    heapSize = len(arr)
+    # 由于数组下标从0开始，因此最后一个父节点为 (heapSize-1)//2, 根节点用0表示
+    for i in range((heapSize-1)//2, -1, -1):
+        # 每次调整 i 位置，使得父节点值大于左右孩子结点
+        maxHeapify(arr, i, heapSize)
+
+def heapSort(arr):
+    # 建堆
+    buildMaxHeap(arr)
+    # 将堆顶元素拿出来与堆中最后一个交换，并对前面heapSize-1个元素调整成为大根堆
+    # 只需要进行n-1次调整
+    for i in range(len(arr)-1, -1, -1):  
+        # 堆顶元素arr[0]与堆中最后一个元素arr[i]交换
+        arr[i], arr[0] = arr[0], arr[i]
+        maxHeapify(arr, 0, i)
+
+# 堆排序算法
+class Solution:
+    def sortArray(self, nums: List[int]) -> List[int]:
+        heapSort(nums)
+        return nums
+```
