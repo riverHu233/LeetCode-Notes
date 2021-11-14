@@ -129,3 +129,5 @@ def heapSort(arr):
     
     return arr
 ```
+
+####[Python标准库模块之heapq使用](https://www.jianshu.com/p/801318c77ab5)
