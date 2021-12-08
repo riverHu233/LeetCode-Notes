@@ -288,3 +288,64 @@ class Solution:
             head, rev = head.next, rev.next
         return True
 ```
+
+
+#### 合并2个有序链表
+##### 思路1：递归法
+[递归思路参考](https://leetcode-cn.com/problems/merge-two-sorted-lists/solution/yi-kan-jiu-hui-yi-xie-jiu-fei-xiang-jie-di-gui-by-/)
+
+##### 递归的规律
++ 递归函数必须要有终止条件，否则会出错；
++ 递归函数先不断调用自身，直到遇到终止条件后进行回溯，最终返回答案。
+
+##### 本题递归解法思路：
+
++ 终止条件：当两个链表都为空时，表示我们对链表已合并完成。
++ 如何递归：我们判断 l1 和 l2 头结点哪个更小，然后较小结点的 next 指针指向其余结点的合并结果。（调用递归）
+
+##### 思路2：迭代法
++ 创建dummy节点，作为结果链表的开头。
++ 创建指向结果列表的指针cur。该指针一直指向结果链表的最后一个节点；**初始状态中，cur指针指向dummy节点**。随着结果链表的增加而不断向后移动，始终保持指向**结果链表**的最后一个节点。
++ 循环遍历2个有序链表。list1, list2
++ 拼接未遍历完的元素。当其中一个链表遍历完成后，若存在另一链表不为空，则将cur的next指针指向该链表
++ 返回结果链表的头节点--dummy节点的下一个节点(dummy.next)。
+
+```
+class Solution:
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        # 递归解法
+        # 递归的终止条件--当list1和list2都遍历结束时
+        # Time: O(m+n)  Space: O(m+n) 
+        if not list1:  # list1为空时，返回list2(若list2也为空，则返回None)
+            return list2
+        if not list2:
+            return list1
+        
+        if list1.val <= list2.val:
+            list1.next = self.mergeTwoLists(list1.next, list2)
+            return list1
+        else:
+            list2.next = self.mergeTwoLists(list1, list2.next)
+            return list2
+
+# 迭代法求解 -- 利用dummy节点，最后返回dummy节点的next即可
+class Solution:
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        # 迭代法求解，创建dummy节点，作为结果链表的头，同时创建cur指针指向结果链表，
+        # 并保证cur指针一直指向结果链表的最后一个节点
+        # Time: O(m+n)  Space: O(m+n)
+        dummy = ListNode(val=0)
+        cur = dummy
+        while list1 and list2:
+            if list1.val <= list2.val:
+                cur.next = list1
+                list1 = list1.next
+            else:
+                cur.next = list2
+                list2 = list2.next
+            cur = cur.next
+        
+        cur.next = list1 if list1 else list2
+
+        return dummy.next
+```
