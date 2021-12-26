@@ -136,3 +136,22 @@ class MyHeap(object):
 ```
 
 参考链接：https://www.coder4.com/archives/3844
+
+[1046. 最后一块石头的重量](https://leetcode-cn.com/problems/last-stone-weight/)
+
+```
+import heapq
+class Solution:
+    def lastStoneWeight(self, stones: List[int]) -> int:
+        # (无思路，参考题解)：最大堆 -- Python heapq 通过将元素取反来构建最大堆
+        # Time: O(nlogn)  时间：25mins
+        stones = list(map(lambda x: -x, stones))
+        heapq.heapify(stones)
+        while len(stones)>1:  # O(n)
+            y, x = heapq.heappop(stones), heapq.heappop(stones)
+            y = abs(y-x)
+            if y:
+                heapq.heappush(stones, -y)  # O(logn)
+        return abs(stones[0]) if stones else 0
+
+```
