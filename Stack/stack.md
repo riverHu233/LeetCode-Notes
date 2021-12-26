@@ -48,3 +48,32 @@ class Solution:
             return res
         return dfs(s, 0)
 ```
+
+[最小栈](https://leetcode-cn.com/problems/min-stack/)
+
+```
+class MinStack:
+    # 使用list来模拟栈，完成pop()和top(), 以及push()操作
+    # 如何在常数时间检索到最小元素呢？借助辅助栈minStack，来存储当前栈的最小元素；当栈内只有1个元素时，
+    # 辅助栈minStack的最小元素为当前元素；当又一个元素进栈时，将该元素与辅助栈顶元素进行比较，将最小元素压入栈中
+    # 使用O(n)的辅助栈空间，操作时间复杂度为O(1)
+    def __init__(self):
+        self.stack = []
+        self.minN = float('inf')
+        self.minStack = []
+
+    def push(self, val: int) -> None:
+        # 记录辅助栈当前最小元素
+        self.minN = min(self.minN, val)
+        self.stack.append(val)
+
+    def pop(self) -> None:
+        self.stack.pop()
+        self.minStack.pop()
+
+    def top(self) -> int:
+        return self.stack[-1]
+
+    def getMin(self) -> int:
+        return self.minStack[-1]
+```
