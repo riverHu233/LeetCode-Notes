@@ -101,3 +101,38 @@ def heapSort(arr):
     
     return arr
 ```
+
+#### 关于Python没有实现大顶堆！！！
+heapq模块中的方法只能用于构造小顶堆，要想实现构造大顶堆，可以将元素取相反数，然后构造小顶堆，最后在计算的时候再取相反数。
+可参考：https://blog.csdn.net/tanghaiyu777/article/details/55271004
+
+python的heapq在实现的时候，没有像STL或者Java可以传入比较函数，具体的原因可以参考参考文档给出的链接。
+
+因此有些人想出了比较trick的思路。一句话概括如下：
+
+push(e)改为push(-e)，pop(e)为-pop(e)，也就是说存入和取出的数都是相反数，其他逻辑和TopK相同。（点赞）
+
+实现用户自定义的比较函数，允许elem是一个tuple，按照tuple的第一个元素进行比较，所以可以把tuple的第一个元素作为我们的比较的key。
+
+原话：
+>The heapq documentation suggests that heap elements could be tuples in which the first element is the priority and defines the sort order.
+
+```
+import heapq
+class MyHeap(object):
+   def __init__(self, initial=None, key=lambda x:x):
+       self.key = key
+       if initial:
+           self._data = [(key(item), item) for item in initial]
+           heapq.heapify(self._data)
+       else:
+           self._data = []
+
+   def push(self, item):
+       heapq.heappush(self._data, (self.key(item), item))
+
+   def pop(self):
+       return heapq.heappop(self._data)[1]
+```
+
+参考链接：https://www.coder4.com/archives/3844
